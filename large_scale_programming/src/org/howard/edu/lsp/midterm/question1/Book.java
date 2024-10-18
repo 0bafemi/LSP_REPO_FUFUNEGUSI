@@ -12,7 +12,7 @@ public class Book {
     private int yearPublished;
     
     /**
-     * Constructs a new {@code Book} with the specified title, author, ISBN, and year published.
+     * Creates a new {@code Book} with the specified title, author, ISBN, and year published.
      *
      * @param title          the title of the book
      * @param author         the author of the book
@@ -26,7 +26,7 @@ public class Book {
         this.yearPublished = yearPublished;
     }
     
-    // Getters and setters
+    // Our Getters and setters
     public String getTitle() { return title; }
     public void setTitle(String title) { this.title = title; }
     
@@ -44,7 +44,7 @@ public class Book {
      * Two books are considered equal if they have the same ISBN and author.
      *
      * @param obj  the object to compare with
-     * @return {@code true} if this book is equal to the specified object; {@code false} otherwise
+     * @return {@code true} if this book is equal to the specified object; {@code false} if not
      */
     @Override
     public boolean equals(Object obj) {
