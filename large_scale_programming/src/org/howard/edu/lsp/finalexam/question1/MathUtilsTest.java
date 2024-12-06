@@ -43,5 +43,31 @@ public class MathUtilsTest {
                 "factorial(-1) should throw IllegalArgumentException");
     }
 
+
+
+    // ----------------------
+    // Tests for isPrime()
+    // ----------------------
+
+    @Test
+    void testIsPrimeWithPrimeNumberShouldReturnTrue() {
+        assertTrue(mathUtils.isPrime(7),
+                "isPrime(7) should return true");
+    }
+
+    @Test
+    void testIsPrimeWithNonPrimeNumberShouldReturnFalse() {
+        assertFalse(mathUtils.isPrime(10),
+                "isPrime(10) should return false");
+    }
+
+    @Test
+    void testIsPrimeWithEdgeCasesShouldReturnFalse() {
+        // 0 and 1 are not prime by definition
+        assertFalse(mathUtils.isPrime(0),
+                "isPrime(0) should return false");
+        assertFalse(mathUtils.isPrime(1),
+                "isPrime(1) should return false");
+    }
 }
 
